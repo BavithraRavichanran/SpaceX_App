@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+.main-container{
+    padding: 30px;
+    background: #ccc;
+}
+.details-container{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+   
+}
+
+.left-col{
+    width:20%;
+    background: #fff;
+}
+
+.right-col{
+    width:79%;
+}
+
+.card-container{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-details{
+    width:24%;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.card{
+    padding:10px;
+}
+
+.img-div{
+    height: 150px;
+    background: #ccc;
+}
+
+.text-div{
+    min-height: 150px;
+}
+.title{
+    color: blue;
+}

@@ -1,0 +1,33 @@
+
+<div class="main-container ">
+   <h3>SpaceX Launch Programs</h3> 
+    <div class="details-container">
+    <!-- Content here -->
+    <div class="left-col">
+    <h4>Filter</h4>
+    Launch Year
+
+    <div *ngFor = "let year of years">
+        <button type="button" class="btn btn-success" (click)= "getYear(year)">{{year}}</button>
+    </div>
+    <h4>Successful Launch</h4>
+    <button type="button" class="btn btn-success"  (click)= "getSuccessLaunch('true')">True</button>
+    <button type="button" class="btn btn-success" (click)= "getSuccessLaunch('false')" >False</button>
+    <h4>Successful Landing</h4>
+    <button type="button" class="btn btn-success" (click)= "getSuccessLand('true')" >True</button>
+    <button type="button" class="btn btn-success" (click)= "getSuccessLand('false')">False</button>
+
+    </div>
+    <div class="right-col">     
+        <div class="card-container">
+        <div *ngFor= 'let item of allSpaceDetails' class="card-details">
+            <app-space-detail [data] = "item"></app-space-detail>
+        </div>
+    </div>
+
+    </div>
+
+</div> 
+
+
+</div>

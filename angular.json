@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "spacex"
+    }
+  },
+  "defaultProject": "spacex",
+  "cli": {
+    "analytics": false
+  }
 }
