@@ -1,12 +1,12 @@
 <div class="card">
     <div class="img-div">
-        <img src=""alt="Landing Page">
+        <img src="{{data.links.mission_patch}}"alt="Landing Page" >
     </div>
     <div class="text-div">
         <b class="title">{{data.mission_name}}</b>
-        <p><b>Mission Ids:</b>{{data.launch_year}}</p>
-        <p><b>Launch Year:</b>{{data.launch_year}}</p>
-        <p><b>Successful Launch:</b>{{data.launch_success}}</p>
-        <p><b>Successful Landing:</b>{{data.launch_landing}}</p>
+        <p><b>Mission Ids:</b> {{data.launch_year}}</p>
+        <p><b>Launch Year:</b> {{data.launch_year}}</p>
+        <p><b>Successful Launch:</b> {{data.launch_success}}</p>
+        <p><b>Successful Landing:</b> {{data.launch_landing ? data.launch_landing : 'NA'}}</p>
     </div>
 </div>

@@ -8,6 +8,7 @@ import { HomeService } from './home.service';
 export class HomeComponent implements OnInit {
 public allSpaceDetails;
 public years = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020];
+public selectedYear;
 
   constructor(private homeservice: HomeService) { }
 
@@ -24,6 +25,7 @@ public years = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018
 
   }
   public getYear(year){
+    
     this.homeservice.getYear(year).subscribe(data => {
       // this.totalItems = data.length;
       this.allSpaceDetails = data;

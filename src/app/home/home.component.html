@@ -4,20 +4,23 @@
         <!-- Content here -->
         <div class="left-col">
             <h4>Filter</h4>
-            Launch Year
+           <p class="sub-heading">Launch Year</p>
+           <hr>
             <div class="year-list">
                 <div *ngFor="let year of years">
-                    <button type="button" class="btn btn-success year" (click)="getYear(year)">{{year}}</button>
+                    <button type="button" class="btn btn-success year" [(ngModel)]="selectedYear" value="selectedYear" (click)="getYear(year)">{{year}}</button>
                 </div>
             </div>
             <div class="success_display">
-                <h4>Successful Launch</h4>
+                <p class="sub-heading">Successful Launch</p>
+                <hr>
                 <div class="year-list">
                     <button type="button" class="btn btn-success " (click)="getSuccessLaunch('true')">True</button>
                     <button type="button" class="btn btn-success" (click)="getSuccessLaunch('false')">False</button>
                 </div>
 
-                <h4>Successful Landing</h4>
+                <p class="sub-heading">Successful Landing</p>
+                <hr>
                 <div class="year-list">
                     <button type="button" class="btn btn-success" (click)="getSuccessLand('true')">True</button>
                     <button type="button" class="btn btn-success" (click)="getSuccessLand('false')">False</button>

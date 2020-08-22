@@ -41,6 +41,10 @@
     height: 150px;
     background: #ccc;
 }
+.sub-heading{
+    text-align: center !important;
+}
+
 
 .text-div{
     min-height: 150px;
@@ -56,17 +60,27 @@
 }
 .year{
     margin: 10px;
+    background-color: rgba(143, 206, 49, 0.801);
 }
 .success_display h4{
 padding: 10px;
+
 }
 .success_display button{
     margin: 10px;
+    background-color: rgba(143, 206, 49, 0.801);
 }
 
+img{
+    height:150px;
+    width:230px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
-
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 700px) {
     .left-col{
         width:100%;
         background: #fff;
@@ -78,6 +92,26 @@ padding: 10px;
     }
     .card-details{
         width:100%;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+
+    .details-container{
+        flex-direction: column;
+    }
+  }
+  @media only screen and (min-width: 701px)and (max-width: 1024px) {
+    .left-col{
+        width:100%;
+        background: #fff;
+    }
+    
+    .right-col{
+        width:100%;
+        margin-top:30px
+    }
+    .card-details{
+        width:50%;
         background: #fff;
         margin-bottom: 10px;
     }
