@@ -4,19 +4,20 @@
     background: #ccc;
 }
 .details-container{
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
+    align-items: flex-start;
    
 }
 
 .left-col{
-    width:20%;
+    width:14%;
     background: #fff;
 }
 
 .right-col{
-    width:79%;
+    width:85%;
 }
 
 .card-container{
@@ -47,3 +48,41 @@
 .title{
     color: blue;
 }
+.year-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+.year{
+    margin: 10px;
+}
+.success_display h4{
+padding: 10px;
+}
+.success_display button{
+    margin: 10px;
+}
+
+
+
+  @media only screen and (max-width: 650px) {
+    .left-col{
+        width:100%;
+        background: #fff;
+    }
+    
+    .right-col{
+        width:100%;
+        margin-top:30px
+    }
+    .card-details{
+        width:100%;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+
+    .details-container{
+        flex-direction: column;
+    }
+  }
