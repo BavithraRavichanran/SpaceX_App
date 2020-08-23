@@ -24,7 +24,8 @@
     width:100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* padding: 10px; */
+    justify-content: space-evenly
 }
 
 .card-details{
@@ -62,6 +63,10 @@
     margin: 10px;
     background-color: rgba(143, 206, 49, 0.801);
 }
+.selectedyear{
+    margin: 10px;
+    background-color: green;
+}
 .success_display h4{
 padding: 10px;
 
@@ -70,6 +75,8 @@ padding: 10px;
     margin: 10px;
     background-color: rgba(143, 206, 49, 0.801);
 }
+
+
 
 img{
     height:150px;

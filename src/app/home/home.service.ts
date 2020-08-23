@@ -6,23 +6,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HomeService {
-
+  public apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100`;
   constructor(private http: HttpClient) { }
-  public getAllSpaceXDetails(): Observable<any> {
-    const apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100`;
-    return this.http.get<any>(apiUrl);
-  }
-public getYear(year){
-  const apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`;
-  return this.http.get<any>(apiUrl);
 
-}
-public getSuccessLaunch(e){
-  const apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${e}`;
-  return this.http.get<any>(apiUrl);
-}
-public getSuccessLand(e){
-  const apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100&land_success=${e}`;
-  return this.http.get<any>(apiUrl);
-}
+  public getAllSpaceXDetails(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
+  }
+  public getYear(year, launch, land) {
+    let apiUrl = `https://api.spaceXdata.com/v3/launches?limit=100`
+       if(year){
+    apiUrl = apiUrl + `&launch_year=${year}`
+    } if(launch){
+      apiUrl = apiUrl +  `&launch_success=${launch}`;
+    } if(land){
+      apiUrl = apiUrl + `&land_success=${land}`;
+    }
+    return this.http.get<any>(apiUrl);
+
+  }
 }

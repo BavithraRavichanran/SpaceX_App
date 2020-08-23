@@ -1,5 +1,12 @@
 # Spacex
 
+npm install 
+Run `npm install --save classlist.js`.
+Run `npm install --save web-animations-js`
+Run `npm install bootstrap`
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server

@@ -1,29 +1,28 @@
 <div class="main-container ">
     <h3>SpaceX Launch Programs</h3>
     <div class="details-container">
-        <!-- Content here -->
         <div class="left-col">
             <h4>Filter</h4>
            <p class="sub-heading">Launch Year</p>
            <hr>
             <div class="year-list">
                 <div *ngFor="let year of years">
-                    <button type="button" class="btn btn-success year" [(ngModel)]="selectedYear" value="selectedYear" (click)="getYear(year)">{{year}}</button>
+                    <button type="button" [ngClass]= "{'btn btn-success year': selectedYear != year, 'btn btn-success selectedyear': selectedYear === year}" value="{{year}}" name= "year"  (click)="getFiltered(year, null, null )">{{year}}</button>
                 </div>
             </div>
             <div class="success_display">
                 <p class="sub-heading">Successful Launch</p>
                 <hr>
                 <div class="year-list">
-                    <button type="button" class="btn btn-success " (click)="getSuccessLaunch('true')">True</button>
-                    <button type="button" class="btn btn-success" (click)="getSuccessLaunch('false')">False</button>
+                    <button type="button" [ngClass]="{'btn btn-success year': selectedLaunch!= 'true', 'btn btn-success selectedyear': selectedLaunch === 'true'}" (click)="getFiltered(null,'true',null)" value='true'>True</button>
+                    <button type="button" [ngClass]="{'btn btn-success year': selectedLaunch!= 'false', 'btn btn-success selectedyear': selectedLaunch === 'false'}" (click)="getFiltered(null,'false',null)"  value='false'>False</button>
                 </div>
 
                 <p class="sub-heading">Successful Landing</p>
                 <hr>
                 <div class="year-list">
-                    <button type="button" class="btn btn-success" (click)="getSuccessLand('true')">True</button>
-                    <button type="button" class="btn btn-success" (click)="getSuccessLand('false')">False</button>
+                    <button type="button" [ngClass]="{'btn btn-success year': selectedLand!= 'true', 'btn btn-success selectedyear': selectedLand === 'true'}" (click)="getFiltered(null, null, 'true')"  value='true'>True</button>
+                    <button type="button" [ngClass]="{'btn btn-success year': selectedLand!= 'false', 'btn btn-success selectedyear': selectedLand === 'false'}" (click)="getFiltered(null, null,'false')"  value='false'>False</button>
                 </div>
             </div>
         </div>
