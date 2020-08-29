@@ -11,6 +11,7 @@ import { existsSync } from 'fs';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
+  const path = require('path');
   const distFolder = join(process.cwd(), 'dist/spacex/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
@@ -28,7 +29,14 @@ export function app(): express.Express {
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
-
+// Serve only the static files form the angularapp directory
+server.use(express.static(__dirname + '/angularapp'));
+ 
+server.get('/*', function(req,res) {
+ 
+res.sendFile(path.join(__dirname+'/angularapp/index.html'));
+});
+ 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
