@@ -87,12 +87,21 @@ img{
     width: 50%;
 }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 400px) {
+    /* .left-col{
+        width:100%;
+        background: #fff;
+    } */
     .left-col{
         width:100%;
         background: #fff;
     }
-    
+    .year-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 55px;
+    }
     .right-col{
         width:100%;
         margin-top:30px
@@ -107,12 +116,52 @@ img{
         flex-direction: column;
     }
   }
-  @media only screen and (min-width: 701px)and (max-width: 1024px) {
-    .left-col{
+  @media only screen and (min-width: 401px)and (max-width: 1024px) {
+    /* .left-col{
         width:100%;
         background: #fff;
+    } */
+    .left-col{
+        width:100%;
+        /* vertical-align: middle; */
+        background: #fff;
     }
-    
+    .year-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 100px;
+    }
+    .right-col{
+        width:100%;
+        margin-top:30px
+    }
+    .card-details{
+        width:50%;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+
+    .details-container{
+        flex-direction: column;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    /* .left-col{
+        width:100%;
+        background: #fff;
+    } */
+    .left-col{
+        width:100%;
+        /* vertical-align: middle; */
+        background: #fff;
+    }
+    .year-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 400px;
+    }
     .right-col{
         width:100%;
         margin-top:30px

@@ -1,6 +1,7 @@
 <div class="card">
     <div class="img-div">
-        <img src="{{data.links.mission_patch}}"alt="Landing Page" >
+        <img  [src]="data.links.flickr_images[0] || data.links.mission_patch_small" alt="Landing Page" loading="lazy"
+        >
     </div>
     <div class="text-div">
         <b class="title">{{data.mission_name}}</b>

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { HomeService } from './home.service';
+import { HomeService } from './shared/home.service';
 import { HomeComponent } from './home.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 describe('HomeComponent', () => {
