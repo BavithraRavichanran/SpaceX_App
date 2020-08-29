@@ -116,7 +116,7 @@ img{
         flex-direction: column;
     }
   }
-  @media only screen and (min-width: 401px)and (max-width: 1024px) {
+  @media only screen and (min-width: 401px)and (max-width: 600px) {
     /* .left-col{
         width:100%;
         background: #fff;
@@ -146,21 +146,17 @@ img{
         flex-direction: column;
     }
   }
-  @media only screen and (min-width: 1024px) {
-    /* .left-col{
-        width:100%;
-        background: #fff;
-    } */
+  @media only screen and (min-width: 601px) and (max-width: 800px) {
+   
     .left-col{
         width:100%;
-        /* vertical-align: middle; */
         background: #fff;
     }
     .year-list{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10px 400px;
+        padding: 10px 250px;
     }
     .right-col{
         width:100%;
