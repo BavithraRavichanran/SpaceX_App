@@ -66,6 +66,7 @@
 .selectedyear{
     margin: 10px;
     background-color: green;
+    color: white;
 }
 .success_display h4{
 padding: 10px;
@@ -87,88 +88,73 @@ img{
     width: 50%;
 }
 
-  @media only screen and (max-width: 400px) {
-    /* .left-col{
-        width:100%;
-        background: #fff;
-    } */
+
+
+
+ 
+
+
+
+
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+
     .left-col{
-        width:100%;
-        background: #fff;
+      width: 24%;
     }
+
     .year-list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 55px;
+        justify-content: flex-start;
     }
-    .right-col{
-        width:100%;
-        margin-top:30px
+    .year-list div{
+        width:48%;
     }
-    .card-details{
-        width:100%;
-        background: #fff;
-        margin-bottom: 10px;
+
+    .year{
+        width: 85%;
     }
+    .selectedyear{
+        width: 85%;
+    }
+
+    .right-col {
+      width: 73%;
+  }
+  .card-details{
+      width:48%;
+  }
+
+
+}
+
+@media only screen and (max-width: 700px) {
 
     .details-container{
         flex-direction: column;
     }
-  }
-  @media only screen and (min-width: 401px)and (max-width: 600px) {
-    /* .left-col{
-        width:100%;
-        background: #fff;
-    } */
     .left-col{
-        width:100%;
-        /* vertical-align: middle; */
-        background: #fff;
-    }
-    .year-list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 100px;
-    }
-    .right-col{
-        width:100%;
-        margin-top:30px
-    }
-    .card-details{
-        width:50%;
-        background: #fff;
-        margin-bottom: 10px;
+      width: 100%;
     }
 
-    .details-container{
-        flex-direction: column;
-    }
-  }
-  @media only screen and (min-width: 601px) and (max-width: 800px) {
-   
-    .left-col{
-        width:100%;
-        background: #fff;
-    }
     .year-list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 250px;
+        justify-content: flex-start;
     }
-    .right-col{
-        width:100%;
-        margin-top:30px
-    }
-    .card-details{
-        width:50%;
-        background: #fff;
-        margin-bottom: 10px;
+    .year-list div{
+        width:48%;
     }
 
-    .details-container{
-        flex-direction: column;
+    .year{
+        width: 85%;
     }
+    .selectedyear{
+        width: 85%;
+    }
+
+    .right-col {
+      width: 100%;
   }
+  .card-details{
+      width:100%;
+  }
+
+
+}
