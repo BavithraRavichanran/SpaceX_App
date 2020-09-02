@@ -46,7 +46,7 @@ res.sendFile(path.join(__dirname+'/angularapp/index.html'));
 }
 
 function run(): void {
-  const port = process.env.PORT || 4000;
+  const port = process.env.PORT || 8080;
 
   // Start up the Node server
   const server = app();
