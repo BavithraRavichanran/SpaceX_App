@@ -22,21 +22,22 @@ export function app(): express.Express {
   server.use(compression())
   server.set('view engine', 'html');
   server.set('views', distFolder);
+  server.use(express.static(__dirname + '/angularapp'));
+  server.get('/*', function (req, res) {
 
+    res.sendFile(path.join(__dirname + '/angularapp/index.html'));
+  });
+  server.listen(process.env.PORT || 8080);
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
-// Serve only the static files form the angularapp directory
-server.use(express.static(__dirname + '/angularapp'));
- 
-server.get('/*', function(req,res) {
- 
-res.sendFile(path.join(__dirname+'/angularapp/index.html'));
-});
- 
+  // Serve only the static files form the angularapp directory
+
+
+
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
