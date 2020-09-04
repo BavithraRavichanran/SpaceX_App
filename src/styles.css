@@ -25,13 +25,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    justify-content: space-evenly
+    /* justify-content: space-evenly */
 }
 
 .card-details{
     width:24%;
     background: #fff;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .card{
