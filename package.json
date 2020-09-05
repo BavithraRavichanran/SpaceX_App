@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "startssr": "npm run serve:ssr",
-    "start": " node server.js ",
+    "start": "npm run serve:ssr && node server.ts ",
     "startapp": "ng serve",
     "startrun": "node server.ts",
     "build": "ng build",
